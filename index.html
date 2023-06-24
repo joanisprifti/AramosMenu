@@ -27,17 +27,17 @@
       <li>
         <h4>Espresso</h4>
         <p>A strong black coffee.</p>
-        <p>Price: $2.50</p>
+        <p class="price">Price: €2.50</p>
       </li>
       <li>
         <h4>Cappuccino</h4>
         <p>Espresso with steamed milk and a layer of foam.</p>
-        <p>Price: $3.50</p>
+        <p class="price">Price: €3.50</p>
       </li>
       <li>
         <h4>Latte</h4>
         <p>Espresso with steamed milk.</p>
-        <p>Price: $3.00</p>
+        <p class="price">Price: €3.00</p>
       </li>
       <!-- Add more coffee items as needed -->
     </ul>
@@ -47,17 +47,17 @@
       <li>
         <h4>Bagel with Cream Cheese</h4>
         <p>A toasted bagel served with cream cheese.</p>
-        <p>Price: $4.50</p>
+        <p class="price">Price: €4.50</p>
       </li>
       <li>
         <h4>Avocado Toast</h4>
         <p>Toast topped with mashed avocado and seasonings.</p>
-        <p>Price: $6.00</p>
+        <p class="price">Price: €6.00</p>
       </li>
       <li>
         <h4>Club Sandwich</h4>
         <p>A classic club sandwich with bacon, lettuce, tomato, and turkey.</p>
-        <p>Price: $8.50</p>
+        <p class="price">Price: €8.50</p>
       </li>
       <!-- Add more food items as needed -->
     </ul>
@@ -84,6 +84,7 @@
     // JavaScript code for handling language switching
     var languageButton = document.getElementById('languageButton');
     var language = 'english'; // Default language
+    var prices = document.querySelectorAll('.price');
     
     languageButton.addEventListener('click', function() {
       // Toggle language between English and another language
@@ -96,9 +97,11 @@
     
     function switchToGreek() {
       // Update text content for elements in the other language
-      language = 'other'; // Replace 'other' with your desired language
+      language = 'greek'; // Replace 'other' with your desired language
+      
       
       // Update text for menu section
+      document.querySelector('header h1').textContent = 'Καλώς ήλθατε στην Καφετέρια';
       document.querySelector('#menu h2').textContent = 'Μενού';
       document.querySelector('#menu h3:first-of-type').textContent = 'Καφές';
       document.querySelector('#menu h3:last-of-type').textContent = 'Φαγητό';
@@ -118,6 +121,7 @@
       language = 'english';
       
       // Update text for menu section
+      document.querySelector('header h1').textContent = 'Welcome to Coffee Shop';
       document.querySelector('#menu h2').textContent = 'Menu';
       document.querySelector('#menu h3:first-of-type').textContent = 'Coffee';
       document.querySelector('#menu h3:last-of-type').textContent = 'Food';
