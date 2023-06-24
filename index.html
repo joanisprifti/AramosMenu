@@ -1,306 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Coffee Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Bar Menu</title>
   <style>
-    /* CSS styling for the website */
-body {
-  font-family: Arial, sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Set the height of the main content area to flex-grow 1 to take up the remaining space */
-main {
-  flex-grow: 1;
-}
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
 
-h1 {
-  margin: 0;
-  font-size: 24px;
-}
+    section {
+      padding: 20px;
+      text-align: center;
+    }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
 
-nav ul li {
-  margin: 0 10px;
-}
+    li {
+      margin-bottom: 20px;
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+    }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
 
-nav ul li a:hover {
-  color: #ffaa00;
-}
+    p {
+      margin: 10px 0;
+    }
 
-section {
-  padding: 40px;
-  text-align: center;
-}
+    .price {
+      font-weight: bold;
+    }
 
-section h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+    #languageButton {
+      background-color: #ffaa00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-li {
-  margin-bottom: 20px;
-}
-
-.price {
-  font-weight: bold;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Colorful styles */
-h3 {
-  color: #ffaa00;
-  margin-top: 20px;
-  font-size: 20px;
-  text-align: center;
-}
-
-li h4 {
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-li p {
-  color: #777;
-}
-
-#languageButton {
-  background-color: #ffaa00;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#languageButton:hover {
-  background-color: #ffa64d;
-}
-
-/* Media queries for responsive design */
-@media screen and (max-width: 768px) {
-  /* Adjust header padding for smaller screens */
-  header {
-    padding: 10px;
-  }
-
-  /* Reduce font size for header elements */
-  h1 {
-    font-size: 20px;
-  }
-
-  nav ul li {
-    margin: 0 5px;
-  }
-
-  /* Reduce padding for section elements */
-  section {
-    padding: 20px;
-  }
-
-  /* Reduce font size for section headings */
-  section h2 {
-    font-size: 18px;
-  }
-
-  /* Adjust padding for list items */
-  li {
-    margin-bottom: 10px;
-  }
-
-  /* Reduce font size for list item headings */
-  li h4 {
-    font-size: 16px;
-  }
-
-  /* Reduce font size for prices */
-  .price {
-    font-size: 14px;
-  }
-
-  /* Adjust footer padding for smaller screens */
-  footer {
-    padding: 10px;
-  }
-}
-
+    #languageButton:hover {
+      background-color: #ffa64d;
+    }
   </style>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <header>
-    <h1>Welcome to Coffee Shop</h1>
-    <nav>
-      <ul>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="languageButton">Αλλαγή γλώσσας σε Αγγλικά (EN)</button>
+    <h1>Coffee Bar Menu</h1>
+    <button id="languageButton" onclick="changeLanguage()">Change Language</button>
   </header>
-  
-  <section id="menu">
-    <h2>Menu</h2>
-    <h3>Coffee</h3>
+
+  <section>
+    <h2 class="en">Coffee</h2>
+    <h2 class="el" style="display: none;">Καφές</h2>
     <ul>
       <li>
-        <h4>Espresso</h4>
-        <p>A strong black coffee.</p>
+        <h2 class="en">Espresso</h2>
+        <h2 class="el" style="display: none;">Εσπρέσο</h2>
+        <p class="en">A strong black coffee.</p>
+        <p class="el" style="display: none;">Ένας δυνατός μαύρος καφές.</p>
         <p class="price">Price: €2.50</p>
       </li>
       <li>
-        <h4>Cappuccino</h4>
-        <p>Espresso with steamed milk and a layer of foam.</p>
+        <h2 class="en">Cappuccino</h2>
+        <h2 class="el" style="display: none;">Καπουτσίνο</h2>
+        <p class="en">Espresso with steamed milk and a layer of foam.</p>
+        <p class="el" style="display: none;">Έσπρεσο με αφρόγαλα και μια στρώση αφρού.</p>
         <p class="price">Price: €3.50</p>
       </li>
       <li>
-        <h4>Latte</h4>
-        <p>Espresso with steamed milk.</p>
+        <h2 class="en">Latte</h2>
+        <h2 class="el" style="display: none;">Λάτε</h2>
+        <p class="en">Espresso with steamed milk.</p>
+        <p class="el" style="display: none;">Έσπρεσο με αφρογάλα.</p>
         <p class="price">Price: €3.00</p>
       </li>
-      <!-- Add more coffee items as needed -->
     </ul>
-    
-    <h3>Food</h3>
+  </section>
+
+  <section>
+    <h2 class="en">Food</h2>
+    <h2 class="el" style="display: none;">Φαγητό</h2>
     <ul>
       <li>
-        <h4>Bagel with Cream Cheese</h4>
-        <p>A toasted bagel served with cream cheese.</p>
+        <h2 class="en">Bagel with Cream Cheese</h2>
+        <h2 class="el" style="display: none;">Μπέγκελ με Κρέμα Τυριού</h2>
+        <p class="en">A toasted bagel served with cream cheese.</p>
+        <p class="el" style="display: none;">Ένα ψημένο μπέγκελ με κρέμα τυριού.</p>
         <p class="price">Price: €4.50</p>
       </li>
       <li>
-        <h4>Avocado Toast</h4>
-        <p>Toast topped with mashed avocado and seasonings.</p>
+        <h2 class="en">Avocado Toast</h2>
+        <h2 class="el" style="display: none;">Τοστ με Αβοκάντο</h2>
+        <p class="en">Toast topped with mashed avocado and seasonings.</p>
+        <p class="el" style="display: none;">Τοστ με πουρέ αβοκάντο και μπαχαρικά.</p>
         <p class="price">Price: €6.00</p>
       </li>
       <li>
-        <h4>Club Sandwich</h4>
-        <p>A classic club sandwich with bacon, lettuce, tomato, and turkey.</p>
+        <h2 class="en">Club Sandwich</h2>
+        <h2 class="el" style="display: none;">Κλαμπ Σάντουιτς</h2>
+        <p class="en">A classic club sandwich with bacon, lettuce, tomato, and turkey.</p>
+        <p class="el" style="display: none;">Ένα κλασικό σάντουιτς κλαμπ με μπέικον, μαρούλι, ντομάτα και γαλοπούλα.</p>
         <p class="price">Price: €8.50</p>
       </li>
-      <!-- Add more food items as needed -->
     </ul>
   </section>
-  
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Stuff about the coffee shop and more.</p>
-  </section>
-  
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: info@coffeeshop.com</p>
-    <p>Phone: 123-456-7890</p>
-    <p>Address: 123 Coffee Street, City, Country</p>
-  </section>
-  
+
   <footer>
-    <p>&copy; 2023 Coffee Shop. All rights reserved.</p>
+    <p>&copy; 2023 Coffee Bar. All rights reserved.</p>
   </footer>
-  
+
   <script>
-    // JavaScript code for handling language switching
-    var languageButton = document.getElementById('languageButton');
-    var language = 'english'; // Default language
-    
-    languageButton.addEventListener('click', function() {
-      // Toggle language between English and another language
-      if (language === 'english') {
-        switchToGreek();
-      } else {
-        switchToEnglish();
+    // JavaScript function to change the language
+    function changeLanguage() {
+      var currentLang = document.documentElement.lang;
+      var newLang = currentLang === "en" ? "el" : "en";
+      document.documentElement.lang = newLang;
+  
+      // Update text content based on the selected language
+      var elements = document.querySelectorAll('[class="en"]');
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = newLang === "en" ? "block" : "none";
       }
-    });
-    
-    function switchToGreek() {
-      // Update text content for elements in the other language
-      language = 'greek'; // Replace 'other' with your desired language
-      
-      
-      // Update text for menu section
-      document.querySelector('header h1').textContent = 'Καλώς ήλθατε στην Καφετέρια';
-      document.querySelectorAll('header li')[0].textContent = 'Μενού';
-      document.querySelectorAll('header li')[1].textContent = 'Για εμάς';
-      document.querySelectorAll('header li')[2].textContent = 'Επικοινωνία';
-      document.querySelector('#menu h2').textContent = 'Μενού';
-      document.querySelector('#menu h3:first-of-type').textContent = 'Καφές';
-      document.querySelector('#menu h3:last-of-type').textContent = 'Φαγητό';
-      document.querySelector('#about p').textContent = 'Πράγματα που αφορούν την επιχείρηση και διάφορα άλλα.';
-
-      // Update text for about section
-      document.querySelector('#about h2').textContent = 'Για Εμάς';
-      
-      // Update text for contact section
-      document.querySelector('#contact h2').textContent = 'Επικοινωνία';
-      
-      // Update text for language button
-      languageButton.textContent = 'Change language to Greek (GR)';
-    }
-    
-    function switchToEnglish() {
-      // Update text content for elements in English
-      language = 'english';
-      
-      // Update text for menu section
-      document.querySelector('header h1').textContent = 'Welcome to Coffee Shop';
-      document.querySelectorAll('header li')[0].textContent = 'Menu';
-      document.querySelectorAll('header li')[1].textContent = 'About Us';
-      document.querySelectorAll('header li')[2].textContent = 'Contact';
-      document.querySelector('#menu h2').textContent = 'Menu';
-      document.querySelector('#menu h3:first-of-type').textContent = 'Coffee';
-      document.querySelector('#menu h3:last-of-type').textContent = 'Food';
-      document.querySelector('#about p').textContent = 'Stuff about the coffee shop and more.';
-
-      // Update text for about section
-      document.querySelector('#about h2').textContent = 'About Us';
-      
-      // Update text for contact section
-      document.querySelector('#contact h2').textContent = 'Contact';
-      
-      // Update text for language button
-      languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
+  
+      elements = document.querySelectorAll('[class="el"]');
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.display = newLang === "el" ? "block" : "none";
+      }
+  
+      // Update price text
+      elements = document.querySelectorAll('.price');
+      for (var i = 0; i < elements.length; i++) {
+        var priceText = elements[i].textContent;
+        var updatedPriceText = currentLang === "en" ? priceText.replace("Price:", "Τιμή:") : priceText.replace("Τιμή:", "Price:");
+        elements[i].textContent = updatedPriceText;
+      }
     }
   </script>
+  
+  
 </body>
 </html>
