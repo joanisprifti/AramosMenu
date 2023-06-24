@@ -4,7 +4,111 @@
   <title>Coffee Shop</title>
   <style>
     /* CSS styling for the website */
-    /* Add your own custom CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffaa00;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #333;
+      /* text-align: center; */
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Colorful styles */
+    h3 {
+      color: #ffaa00;
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    li h4 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    li p {
+      color: #777;
+    }
+
+    #languageButton {
+      background-color: #ffaa00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #languageButton:hover {
+      background-color: #ffa64d;
+    }
   </style>
 </head>
 <body>
@@ -17,7 +121,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button id="languageButton">Change language to Greek (GR)</button>
+    <button id="languageButton">Αλλαγή γλώσσας σε Αγγλικά (EN)</button>
   </header>
   
   <section id="menu">
@@ -102,10 +206,14 @@
       
       // Update text for menu section
       document.querySelector('header h1').textContent = 'Καλώς ήλθατε στην Καφετέρια';
+      document.querySelectorAll('header li')[0].textContent = 'Μενού';
+      document.querySelectorAll('header li')[1].textContent = 'Για εμάς';
+      document.querySelectorAll('header li')[2].textContent = 'Επικοινωνία';
       document.querySelector('#menu h2').textContent = 'Μενού';
       document.querySelector('#menu h3:first-of-type').textContent = 'Καφές';
       document.querySelector('#menu h3:last-of-type').textContent = 'Φαγητό';
-      
+      document.querySelector('about p').textContent = 'Πράγματα που αφορούν την επιχείρηση και διάφορα άλλα.';
+
       // Update text for about section
       document.querySelector('#about h2').textContent = 'Για Εμάς';
       
@@ -113,7 +221,7 @@
       document.querySelector('#contact h2').textContent = 'Επικοινωνία';
       
       // Update text for language button
-      languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
+      languageButton.textContent = 'Change language to Greek (GR)';
     }
     
     function switchToEnglish() {
@@ -122,10 +230,14 @@
       
       // Update text for menu section
       document.querySelector('header h1').textContent = 'Welcome to Coffee Shop';
+      document.querySelectorAll('header li')[0].textContent = 'Menu';
+      document.querySelectorAll('header li')[1].textContent = 'About Us';
+      document.querySelectorAll('header li')[2].textContent = 'Contact';
       document.querySelector('#menu h2').textContent = 'Menu';
       document.querySelector('#menu h3:first-of-type').textContent = 'Coffee';
       document.querySelector('#menu h3:last-of-type').textContent = 'Food';
-      
+      document.querySelector('about p').textContent = 'Stuff about the coffee shop and more.';
+
       // Update text for about section
       document.querySelector('#about h2').textContent = 'About Us';
       
@@ -133,9 +245,8 @@
       document.querySelector('#contact h2').textContent = 'Contact';
       
       // Update text for language button
-      languageButton.textContent = 'Change language to Greek (GR)';
+      languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
     }
   </script>
 </body>
-  </html>
-    
+</html>
