@@ -78,7 +78,7 @@
 <body>
   <header>
     <h1>Coffee Bar Menu</h1>
-    <button id="languageButton" onclick="changeLanguage()">Change Language</button>
+    <button id="languageButton" onclick="changeLanguage()">Αλλαγή Γλώσσας</button>
   </header>
 
   <section>
@@ -147,7 +147,11 @@
       var currentLang = document.documentElement.lang;
       var newLang = currentLang === "en" ? "el" : "en";
       document.documentElement.lang = newLang;
-  
+    
+      // Update text content based on the selected language
+      var languageButton = document.getElementById("languageButton");
+      languageButton.textContent = newLang === "el" ? "Change Language" : "Αλλαγή Γλώσσας";
+
       // Update text content based on the selected language
       var elements = document.querySelectorAll('[class="en"]');
       for (var i = 0; i < elements.length; i++) {
