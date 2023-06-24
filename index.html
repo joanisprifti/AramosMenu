@@ -17,7 +17,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button id="languageButton">Change Language</button>
+    <button id="languageButton">Change language to Greek (GR)</button>
   </header>
   
   <section id="menu">
@@ -88,13 +88,13 @@
     languageButton.addEventListener('click', function() {
       // Toggle language between English and another language
       if (language === 'english') {
-        switchToOtherLanguage();
+        switchToGreek();
       } else {
         switchToEnglish();
       }
     });
     
-    function switchToOtherLanguage() {
+    function switchToGreek() {
       // Update text content for elements in the other language
       language = 'other'; // Replace 'other' with your desired language
       
@@ -104,13 +104,13 @@
       document.querySelector('#menu h3:last-of-type').textContent = 'Food (Other Language)';
       
       // Update text for about section
-      document.querySelector('#about h2').textContent = 'About Us (Other Language)';
+      document.querySelector('#about h2').textContent = 'Για Εμάς';
       
       // Update text for contact section
-      document.querySelector('#contact h2').textContent = 'Contact (Other Language)';
+      document.querySelector('#contact h2').textContent = 'Επικοινωνία';
       
       // Update text for language button
-      languageButton.textContent = 'Switch to English';
+      languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
     }
     
     function switchToEnglish() {
@@ -129,7 +129,7 @@
       document.querySelector('#contact h2').textContent = 'Contact';
       
       // Update text for language button
-      languageButton.textContent = 'Change Language';
+      languageButton.textContent = 'Change language to Greek (GR)';
     }
   </script>
 </body>
