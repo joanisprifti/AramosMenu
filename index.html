@@ -169,8 +169,7 @@
   
   <section id="about">
     <h2>About Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non semper velit. Nulla id dolor vitae neque pharetra iaculis at at nibh.</p>
-    <p>Etiam interdum dictum ipsum, in posuere augue efficitur eu. In fringilla justo sed feugiat fermentum.</p>
+    <p>Stuff about the coffee shop and more.</p>
   </section>
   
   <section id="contact">
@@ -188,7 +187,6 @@
     // JavaScript code for handling language switching
     var languageButton = document.getElementById('languageButton');
     var language = 'english'; // Default language
-    var prices = document.querySelectorAll('.price');
     
     languageButton.addEventListener('click', function() {
       // Toggle language between English and another language
@@ -212,7 +210,7 @@
       document.querySelector('#menu h2').textContent = 'Μενού';
       document.querySelector('#menu h3:first-of-type').textContent = 'Καφές';
       document.querySelector('#menu h3:last-of-type').textContent = 'Φαγητό';
-      document.querySelector('about p').textContent = 'Πράγματα που αφορούν την επιχείρηση και διάφορα άλλα.';
+      document.querySelector('#about p').textContent = 'Πράγματα που αφορούν την επιχείρηση και διάφορα άλλα.';
 
       // Update text for about section
       document.querySelector('#about h2').textContent = 'Για Εμάς';
@@ -222,6 +220,8 @@
       
       // Update text for language button
       languageButton.textContent = 'Change language to Greek (GR)';
+
+      document.querySelectorAll('.price').replace('Price', 'Τιμή');
     }
     
     function switchToEnglish() {
@@ -236,7 +236,7 @@
       document.querySelector('#menu h2').textContent = 'Menu';
       document.querySelector('#menu h3:first-of-type').textContent = 'Coffee';
       document.querySelector('#menu h3:last-of-type').textContent = 'Food';
-      document.querySelector('about p').textContent = 'Stuff about the coffee shop and more.';
+      document.querySelector('#about p').textContent = 'Stuff about the coffee shop and more.';
 
       // Update text for about section
       document.querySelector('#about h2').textContent = 'About Us';
@@ -246,6 +246,8 @@
       
       // Update text for language button
       languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
+
+      document.querySelectorAll('.price').replace('Τιμή', 'Price');
     }
   </script>
 </body>
