@@ -17,6 +17,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button id="languageButton">Change Language</button>
   </header>
   
   <section id="menu">
@@ -78,6 +79,59 @@
   <footer>
     <p>&copy; 2023 Coffee Shop. All rights reserved.</p>
   </footer>
-</body>
-      </html>
+  
+  <script>
+    // JavaScript code for handling language switching
+    var languageButton = document.getElementById('languageButton');
+    var language = 'english'; // Default language
+    
+    languageButton.addEventListener('click', function() {
+      // Toggle language between English and another language
+      if (language === 'english') {
+        switchToOtherLanguage();
+      } else {
+        switchToEnglish();
+      }
+    });
+    
+    function switchToOtherLanguage() {
+      // Update text content for elements in the other language
+      language = 'other'; // Replace 'other' with your desired language
       
+      // Update text for menu section
+      document.querySelector('#menu h2').textContent = 'Menu (Other Language)';
+      document.querySelector('#menu h3:first-of-type').textContent = 'Coffee (Other Language)';
+      document.querySelector('#menu h3:last-of-type').textContent = 'Food (Other Language)';
+      
+      // Update text for about section
+      document.querySelector('#about h2').textContent = 'About Us (Other Language)';
+      
+      // Update text for contact section
+      document.querySelector('#contact h2').textContent = 'Contact (Other Language)';
+      
+      // Update text for language button
+      languageButton.textContent = 'Switch to English';
+    }
+    
+    function switchToEnglish() {
+      // Update text content for elements in English
+      language = 'english';
+      
+      // Update text for menu section
+      document.querySelector('#menu h2').textContent = 'Menu';
+      document.querySelector('#menu h3:first-of-type').textContent = 'Coffee';
+      document.querySelector('#menu h3:last-of-type').textContent = 'Food';
+      
+      // Update text for about section
+      document.querySelector('#about h2').textContent = 'About Us';
+      
+      // Update text for contact section
+      document.querySelector('#contact h2').textContent = 'Contact';
+      
+      // Update text for language button
+      languageButton.textContent = 'Change Language';
+    }
+  </script>
+</body>
+  </html>
+    
