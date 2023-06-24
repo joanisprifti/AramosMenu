@@ -4,121 +4,169 @@
   <title>Coffee Shop</title>
   <style>
     /* CSS styling for the website */
-    body {
-      font-family: Arial, sans-serif;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-    /* Set the height of the main content area to flex-grow 1 to take up the remaining space */
-    main {
-      flex-grow: 1;
-    }
+/* Set the height of the main content area to flex-grow 1 to take up the remaining space */
+main {
+  flex-grow: 1;
+}
 
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-    h1 {
-      margin: 0;
-      font-size: 24px;
-    }
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-    nav ul li {
-      margin: 0 10px;
-    }
+nav ul li {
+  margin: 0 10px;
+}
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-    nav ul li a:hover {
-      color: #ffaa00;
-    }
+nav ul li a:hover {
+  color: #ffaa00;
+}
 
-    section {
-      padding: 40px;
-      text-align: center;
-    }
+section {
+  padding: 40px;
+  text-align: center;
+}
 
-    section h2 {
-      margin-bottom: 20px;
-      color: #333;
-      /* text-align: center; */
-    }
+section h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-    li {
-      margin-bottom: 20px;
-    }
+li {
+  margin-bottom: 20px;
+}
 
-    .price {
-      font-weight: bold;
-    }
+.price {
+  font-weight: bold;
+}
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
 
-    /* Colorful styles */
-    h3 {
-      color: #ffaa00;
-      margin-top: 20px;
-      font-size: 20px;
-      text-align: center;
-    }
+/* Colorful styles */
+h3 {
+  color: #ffaa00;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
 
-    li h4 {
-      color: #333;
-      font-size: 18px;
-      margin-bottom: 5px;
-      text-align: center;
-    }
+li h4 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
-    li p {
-      color: #777;
-    }
+li p {
+  color: #777;
+}
 
-    #languageButton {
-      background-color: #ffaa00;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+#languageButton {
+  background-color: #ffaa00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    #languageButton:hover {
-      background-color: #ffa64d;
-    }
+#languageButton:hover {
+  background-color: #ffa64d;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  /* Adjust header padding for smaller screens */
+  header {
+    padding: 10px;
+  }
+
+  /* Reduce font size for header elements */
+  h1 {
+    font-size: 20px;
+  }
+
+  nav ul li {
+    margin: 0 5px;
+  }
+
+  /* Reduce padding for section elements */
+  section {
+    padding: 20px;
+  }
+
+  /* Reduce font size for section headings */
+  section h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust padding for list items */
+  li {
+    margin-bottom: 10px;
+  }
+
+  /* Reduce font size for list item headings */
+  li h4 {
+    font-size: 16px;
+  }
+
+  /* Reduce font size for prices */
+  .price {
+    font-size: 14px;
+  }
+
+  /* Adjust footer padding for smaller screens */
+  footer {
+    padding: 10px;
+  }
+}
+
   </style>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <header>
     <h1>Welcome to Coffee Shop</h1>
@@ -228,8 +276,6 @@
       
       // Update text for language button
       languageButton.textContent = 'Change language to Greek (GR)';
-
-      document.querySelectorAll('.price').replace('Price', 'Τιμή');
     }
     
     function switchToEnglish() {
@@ -254,8 +300,6 @@
       
       // Update text for language button
       languageButton.textContent = 'Αλλαγή γλώσσας σε Αγγλικά (EN)';
-
-      document.querySelectorAll('.price').replace('Τιμή', 'Price');
     }
   </script>
 </body>
