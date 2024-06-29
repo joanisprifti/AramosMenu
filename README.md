@@ -4,6 +4,6 @@
 
 #### Below you can see some indicative images
 
-![viber_image_2023-07-18_10-20-44-619](https://github.com/johnprif/AramosMenu/assets/56134761/0bfe5cdb-ced5-4026-a4dd-366f361600d0)
-![viber_image_2023-07-18_10-20-44-780](https://github.com/johnprif/AramosMenu/assets/56134761/00a2d3e7-735a-40d9-8572-11829b07a743)
+![aramosMenuEN](https://github.com/johnprif/AramosMenu/assets/56134761/7bd8f198-1717-434b-a32a-3f7ff80747be)
+![aramosMenuGR](https://github.com/johnprif/AramosMenu/assets/56134761/297dc7a3-bf1d-42c1-b125-2b288101b266)
 ![AramosQR](https://github.com/johnprif/AramosMenu/assets/56134761/c251b094-99d3-4d10-9257-4ee856641436)
