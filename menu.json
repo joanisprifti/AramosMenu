@@ -1,0 +1,523 @@
+{
+    "menu": [
+      {
+        "id": "coffee",
+        "name": { "en": "COFFEE", "el": "ΚΑΦΕΔΕΣ" },
+        "items": [
+          { "name": { "en": "Espresso", "el": "Εσπρέσσο μονό" }, "price": 2.50 },
+          { "name": { "en": "Double espresso", "el": "Εσπρέσσο διπλό" }, "price": 3.50 },
+          { "name": { "en": "Freddo espresso", "el": "Φρέντο εσπρέσσο" }, "price": 3.50 },
+          { "name": { "en": "Freddo cappuccino", "el": "Φρέντο καπουτσίνο" }, "price": 3.50 },
+          { "name": { "en": "Espresso maciato", "el": "Εσπρέσσο μακιάτο" }, "price": 2.50 },
+          { "name": { "en": "Espresso affogato", "el": "Εσπρέσσο affogato" }, "price": 5.00 },
+          { "name": { "en": "Cappuccino", "el": "Καπουτσίνο μονό" }, "price": 3.50 },
+          { "name": { "en": "Double cappuccino", "el": "Καπουτσίνο διπλό" }, "price": 4.00 },
+          {
+            "name": { "en": "Latte", "el": "Λάτε" },
+            "description": { "en": "hot, cold", "el": "ζεστό, κρύο" },
+            "price": 3.50
+          },
+          { "name": { "en": "Americano", "el": "Αμερικάνο μονό" }, "price": 2.50 },
+          { "name": { "en": "Double americano", "el": "Αμερικάνο διπλό" }, "price": 3.50 },
+          { "name": { "en": "Filter coffee", "el": "Καφές φίλτρου" }, "price": 3.50 },
+          { "name": { "en": "Frappe", "el": "Φραπέ" }, "price": 3.50 },
+          { "name": { "en": "Frappe with Baileys'", "el": "Φραπέ με Baileys'" }, "price": 6.00 },
+          { "name": { "en": "Frappe with ice cream", "el": "Φραπέ με παγωτό" }, "price": 6.00 },
+          { "name": { "en": "Greek coffee", "el": "Ελληνικός μονός" }, "price": 2.50 },
+          { "name": { "en": "Double greek coffee", "el": "Ελληνικός διπλός" }, "price": 3.50 },
+          {
+            "name": { "en": "Chocolate", "el": "Σοκολάτα" },
+            "description": { "en": "hot, cold", "el": "ζεστή, κρύα" },
+            "price": 3.50
+          },
+          { "name": { "en": "Chocolate Viennoua", "el": "Σοκολάτα Βιενουά" }, "price": 4.00 }
+        ]
+      },
+      {
+        "id": "juice",
+        "name": { "en": "JUICE", "el": "ΧΥΜΟΙ" },
+        "items": [
+          { "name": { "en": "Mix", "el": "Ανάμικτος" }, "price": 3.00 },
+          { "name": { "en": "Peach", "el": "Ροδάκινο" }, "price": 3.00 },
+          { "name": { "en": "Sour cherry", "el": "Βύσσινο" }, "price": 3.00 },
+          { "name": { "en": "Banana", "el": "Μπανάνα" }, "price": 3.00 },
+          { "name": { "en": "Orange", "el": "Πορτοκάλι" }, "price": 3.00 },
+          { "name": { "en": "Pineapple", "el": "Ανανάς" }, "price": 3.00 },
+          { "name": { "en": "Fresh orange juice", "el": "Φυσικός χυμός πορτοκάλι" }, "price": 4.00 }
+        ]
+      },
+      {
+        "id": "vita-me",
+        "name": { "en": "VITA-ME", "el": "ΒΗΤΑ-ΜΙ" },
+        "items": [
+          { "name": { "en": "Green Apple & Pomegranate", "el": "Πράσινο Μήλο & Ρόδι" }, "price": 3.50 },
+          { "name": { "en": "Lemon", "el": "Λεμόνι" }, "price": 3.50 },
+          { "name": { "en": "Lemon & Strawberry", "el": "Λεμόνι & Φράουλα" }, "price": 3.50 },
+          { "name": { "en": "Peach", "el": "Ροδάκινο" }, "price": 3.50 },
+          { "name": { "en": "Tangerine", "el": "Μανταρίνι" }, "price": 3.50 },
+          { "name": { "en": "Lemon & Ginger", "el": "Λεμόνι & Τζίντζερ" }, "price": 3.50 }
+        ]
+      },
+      {
+        "id": "water-ice",
+        "name": { "en": "WATER ICE", "el": "ΓΡΑΝΙΤΕΣ ΣΠΙΤΙΚΕΣ" },
+        "items": [
+          { "name": { "en": "Strawberry", "el": "Φράουλα" }, "price": 6.00 },
+          { "name": { "en": "Lemon", "el": "Λεμόνι" }, "price": 6.00 },
+          { "name": { "en": "Mango", "el": "Μάνγκο" }, "price": 6.00 },
+          { "name": { "en": "Mix", "el": "Ανάμεικτη" }, "price": 6.00 }
+        ]
+      },
+      {
+        "id": "beers",
+        "name": { "en": "BEERS", "el": "ΜΠΥΡΕΣ" },
+        "items": [
+          { "name": { "en": "Small glass", "el": "Βαρέλι μικρή" }, "price": 4.00 },
+          { "name": { "en": "Large glass", "el": "Βαρέλι μεγάλη" }, "price": 6.00 },
+          { "name": { "en": "Mamos 330ml", "el": "Μάμος 330ml" }, "price": 4.00 },
+          { "name": { "en": "Mythos 330ml", "el": "Μύθος 330ml" }, "price": 4.00 },
+          { "name": { "en": "Nymfi 330ml", "el": "Νύμφη 330ml" }, "price": 4.00 },
+          { "name": { "en": "Amstel 330ml", "el": "Άμστελ 330ml" }, "price": 4.00 },
+          { "name": { "en": "Amstel Radler 330ml", "el": "Άμστελ Radler 330ml" }, "price": 4.00 },
+          { "name": { "en": "Kaiser 330ml", "el": "Kaiser 330ml" }, "price": 4.00 },
+          { "name": { "en": "Sol 330ml", "el": "Sol 330ml" }, "price": 6.00 }
+        ]
+      },
+      {
+        "id": "wine",
+        "name": { "en": "WINE", "el": "ΚΡΑΣΙΑ" },
+        "items": [
+          {
+            "name": { "en": "Paranga", "el": "Παράγκα" },
+            "description": { "en": "white, red", "el": "Λευκό, κόκκινο" },
+            "price": 5.00
+          },
+          {
+            "name": { "en": "Vivlia Hora", "el": "Βιβλία Χώρα" },
+            "description": { "en": "white, red", "el": "Λευκό, κόκκινο" },
+            "price": 7.00
+          }
+        ]
+      },
+      {
+        "id": "classic-cocktails",
+        "name": { "en": "CLASSIC COCKTAILS", "el": "ΚΛΑΣΙΚΑ COCKTAILS" },
+        "items": [
+          {
+            "name": { "en": "MOJITO", "el": "MOJITO" },
+            "description": {
+              "en": "passion fruit, pineapple, almond, coconut, melon, tangerine, strawberry, green apple",
+              "el": "φρούτα του πάθους, ανανάς, αμύγδαλο, καρύδα, πεπόνι, μανταρίνι, φράουλα, πράσινο μήλο"
+            },
+            "price": 9.00
+          },
+          { "name": { "en": "MARGARITA", "el": "MARGARITA" }, "price": 9.00 },
+          {
+            "name": { "en": "PINA COLADA", "el": "PINA COLADA" },
+            "description": { "en": "rum, pineapple, coconut, lime", "el": "ρούμι, ανανάς, καρύδα, λάιμ" },
+            "price": 9.00
+          },
+          {
+            "name": { "en": "PORNSTAR", "el": "PORNSTAR" },
+            "description": { "en": "vodka, vanilla, passion fruit, passoa, lime", "el": "βότκα, βανίλια, φρούτα του πάθους, πασόα, λάιμ" },
+            "price": 9.00
+          },
+          {
+            "name": { "en": "MAI TAI", "el": "MAI TAI" },
+            "description": { "en": "rum, pineapple, lime, almond", "el": "ρούμι, ανανάς, λάιμ, αμύγδαλο" },
+            "price": 9.00
+          },
+          {
+            "name": { "en": "DAQUIRI", "el": "DAQUIRI" },
+            "description": {
+              "en": "strawberry, passion fruit, pineapple, coconut, melon, tangerine, green apple",
+              "el": "φράουλα, φρούτα του πάθους, ανανάς, καρύδα, πεπόνι, μανταρίνι, πράσινο μήλο"
+            },
+            "price": 9.00
+          },
+          {
+            "name": { "en": "CAIPIROSKA", "el": "CAIPIROSKA" },
+            "description": { "en": "vodka, sugar, lime", "el": "βότκα, ζάχαρη, λάιμ" },
+            "price": 9.00
+          },
+          {
+            "name": { "en": "AMARETTO SOUR", "el": "AMARETTO SOUR" },
+            "description": { "en": "dissarono, lemon, bitter angostura", "el": "dissarono, λεμόνι, bitter angostura" },
+            "price": 9.00
+          },
+          { "name": { "en": "APEROL SPRITZ", "el": "APEROL SPRITZ" }, "price": 9.00 },
+          {
+            "name": { "en": "NEGRONI", "el": "NEGRONI" },
+            "description": { "en": "gin, campari, martini, rosso, bitter orange", "el": "τζιν, καμπάρι, μαρτίνι, κόκκινο, νεράντζι" },
+            "price": 10.00
+          },
+          {
+            "name": { "en": "ZOMBIE", "el": "ZOMBIE" },
+            "description": { "en": "black rum, white rum, liqueur orange, lime, grapefruit, pineapple, bitter angostura, falernum", "el": "μαύρο ρούμι, λευκό ρούμι, λικέρ πορτοκάλι, λάιμ, γκρέιπφρουτ, ανανάς, bitter angostura, falernum" },
+            "price": 14.00
+          }
+        ]
+      },
+      {
+        "id": "signature-cocktails",
+        "name": { "en": "SIGNATURE COCKTAILS", "el": "SIGNATURE COCKTAILS" },
+        "items": [
+            {
+                "name": { "en": "KINKY LOLLIPOP", "el": "KINKY LOLLIPOP" },
+                "description": {
+                  "en": "orange liqueur, vodka, bitter orange, caramel, lime",
+                  "el": "λικέρ πορτοκάλι, βότκα, νεράντζι, καραμέλα, λάιμ"
+                },
+                "price": 12.00
+              },
+              {
+                "name": {"en": "ARAMOS", "el": "ARAMOS"},
+                "description": {
+                    "en": "cinammon, lime, pineapple, blue curacao, vodka, plum bitter",
+                    "el": "κυδώνι, λάιμ, ανανάς, blue curacao, βότκα, plum bitter"
+                },
+                "price": 12.00
+              },
+              {
+                "name": {"en": "MELLOTINI", "el": "MELLOTINI"},
+                "description": {
+                    "en": "liqueur mellon, mastiha, lime, ginger",
+                    "el": "λικέρ μέλι, μαστίχα, λάιμ, τζίντζερ"
+                },
+                "price": 12.00
+              },
+              {
+                "name": {"en": "SUNSET", "el": "SUNSET"},
+                "description": {
+                    "en": "peach, cucumber, gin, lime",
+                    "el": "ροδάκινο, αγγούρι, τζιν, λάιμ"
+                },
+                "price": 12.00
+              },
+              {
+                "name": {"en": "SUMMER PASSION", "el": "SUMMER PASSION"},
+                "description": {
+                    "en": "rum, melon, passoa, lime, passion fruit, bitter angostura",
+                    "el": "ρούμι, πεπόνι, πασόα, λάιμ, φρούτα του πάθους, bitter angostura"
+                },
+                "price": 12.00
+              }
+            ]
+        },
+        {
+            "id": "non-alcohol-cocktails",
+            "name": {"en": "NON ALCOHOL COCKTAILS", "el": "COCKTAILS ΧΩΡΙΣ ΑΛΚΟΟΛ"},
+            "items":[
+                {
+                    "name": {"en": "DETOX", "el": "DETOX"},
+                    "description": {
+                        "en": "green tea, lime, mint, aegean 3 cents",
+                        "el": "πράσινο τσάι, λάιμ, μέντα, aegean 3 cents"
+                    },
+                    "price": 7.00
+                },
+                {
+                    "name": {"en": "FRUIT LOVERS", "el": "FRUIT LOVERS"},
+                    "description": {
+                        "en": "pineapple, passion fruit, almont, lime, bitetr orange",
+                        "el": "ανανάς, φρούτα του πάθους, αμύγδαλο, λάιμ, νεράντζι"
+                    },
+                    "price": 7.00
+                },
+                {
+                    "name": {"en": "MOJITO O.", "el": "MOJITO O."},
+                    "price": 7.00
+                }
+            ]
+        },
+        {
+            "id": "soft-drinks",
+            "name": {"en": "SOFT DRINKS ", "el": "ΑΝΑΨΥΚΤΙΚΑ"},
+            "items":[
+                {
+                    "name": {"en": "Orangeade", "el":"Πορτοκαλάδα"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Orange blue", "el": "Πορτοκαλάδα (χωρίς ανθρακικό)"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Lemonade", "el": "Λεμονάδα"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Coca cola", "el": "Κόκα κόλα"},
+                    "description": {
+                        "en": "normal/zero/light",
+                        "el": "normal/zero/light"
+                    },
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Sprite", "el": "Σπράιτ"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Soda", "el": "Σόδα"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Sparkling water", "el": "Ανθρακούχο νερό"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Cold tea", "el": "Τσάι κρύο"},
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Three cents Aegean 200ml", "el": "Three cents Aegean 200ml"},
+                    "price": 5.00
+                },
+                {
+                    "name": {"en": "Three cents grapefruit 200ml", "el": "Three cents grapefruit 200ml"},
+                    "price": 5.00
+                },
+                {
+                    "name": {"en": "Red Bull", "el": "Red Bull"},
+                    "price": 5.00
+                }
+            ]
+        },
+        {
+            "id": "drinks",
+            "name": {"en": "DRINKS", "el": "ΠΟΤΑ"},
+            "items":[
+                {
+                    "name": {"en": "Simple drink", "el": "Ποτό απλό"},
+                    "price": 7.00
+                },
+                {
+                    "name": {"en": "Special drink", "el": "Ποτό σπέσιαλ"},
+                    "price": 8.00
+                },
+                {
+                    "name": {"en": "Ouzo Plomari 50ml", "el": "Ούζο Πλωμάρι 50ml"},
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "Tsipouro Idoniko 50ml", "el": "Τσίπουρο Ηδωνικό 50ml"},
+                    "price": 4.00
+                }
+            ]
+        },
+        {
+            "id": "ice-cream",
+            "name": {"en": "ICE CREAM", "el": "ΠΑΓΩΤΑ"},
+            "items": [
+                {
+                    "name": {"en": "Vanilla", "el": "Βανίλια"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Chocolate", "el": "Σοκολάτα"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Stratsiatela", "el": "Στρατσιατέλα"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Cookies", "el": "Κούκις"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Ferrero", "el": "Φερέρο"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Sorbet lemon", "el": "Σορμπέ λεμόνι"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Sorbet strawberry", "el": "Σορμπέ φράουλα"},
+                    "price": 2.50
+                },
+                {
+                    "name": {"en": "Sorbet mango", "el": "Σορμπέ μάνγκο"},
+                    "price": 2.50
+                }
+            ]
+        },
+        {
+            "id": "sweet-snacks",
+            "name": {"en": "SWEET SNACKS", "el": "ΓΛΥΚΑ ΣΝΑΚ"},
+            "items": [
+                {
+                    "name": {"en": "Sweet club sandwich", "el": "Γλυκό κλάμπ σάντουιτς"},
+                    "description": {
+                        "en": "butter, strawberry, crumbed biscuit, cinnamon, pralina",
+                        "el": "βούτυρο, φράουλα, τριμμένο μπισκότο, κανέλα, μερέντα"
+                    },
+                    "price": 7.00
+                },
+                {
+                    "name": {"en": "Sweet Mexican roll", "el": "Γλυκιά τορτίγια"},
+                    "description": {
+                        "en": "banana, tahini, honey",
+                        "el": "μπανάνα, ταχίνι, μέλι"
+                    },
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "Chocolate souffle", "el": "Σουφλέ σοκολάτας"},
+                    "price": 0.00
+                },
+                {
+                    "name": {"en": "Kataifi", "el": "Καταϊφι"},
+                    "price": 0.00
+                },
+                {
+                    "name": {"en": "Banoffi", "el": "Μπανόφι"},
+                    "price": 0.00
+                }
+            ]
+        },
+        {
+            "id": "salades",
+            "name": {"en": "SALADES", "el": "ΣΑΛΑΤΕΣ"},
+            "items": [
+                {
+                    "name": {"en": "Aramos salad", "el": "Σαλάτα Άραμος"},
+                    "description": {
+                        "en": "mix vegetables, chicken, cherry tomatos, crouton, balsamic sauce",
+                        "el": "Ανάμικτα λαχανικά, κοτόπουλο, ντοματίνια, κρουτόν, σως βαλσάμικου"
+                    },
+                    "price": 10.00
+                },
+                {
+                    "name": {"en": "Greek salad", "el": "Χωριάτικη"},
+                    "price": 10.00
+                },
+                {
+                    "name": {"en": "Fruit salad", "el": "Φρουτοσαλάτα"},
+                    "price": 0.00
+                }
+            ]
+        },
+        {
+            "id": "snacks",
+            "name": {"en": "SNACKS", "el": "ΣΝΑΚ"},
+            "items": [
+                {
+                    "name": {"en": "1. Baguette", "el": "1. Μπαγκέτα"},
+                    "description": {
+                        "en": "Cheese, ham, tomato, mayonnaise",
+                        "el": "Τυρί, ζαμπόν, ντομάτα, μαγιονέζα"
+                    },
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "2. Baguette", "el": "2. Μπαγκέτα"},
+                    "description": {
+                        "en": "Cheese, turkey, tomato, mayonnaise",
+                        "el": "Τυρί, γαλοπούλα, ντομάτα, μαγιονέζα"
+                    },
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "3. Baguette", "el": "3. Μπαγκέτα"},
+                    "description": {
+                        "en": "Filadelphia cheese, chicken nuggets, arugula",
+                        "el": "Φιλαδέλφεια, κοτομπουκιές, ρόκα"
+                    },
+                    "price": 5.00
+                },
+                {
+                    "name": {"en": "1. Mexican roll", "el": "1. Τορτίγια"},
+                    "description": {
+                        "en": "Cream cheese, turkey, rocket, cucumber",
+                        "el": "Τυρί κρέμα, γαλοπούλα, ρόκα, αγγούρι"
+                    },
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "2. Mexican roll", "el": "2. Τορτίγια"},
+                    "description": {
+                        "en": "Cheese, ham, tomato, mayonnaise",
+                        "el": "Τυρί, ζαμπόν, ντομάτα, μαγιονέζα"
+                    },
+                    "price": 4.00
+                },
+                {
+                    "name": {"en": "1. Club sandwich", "el": "1. Κλαμπ σάντουιτς"},
+                    "description": {
+                        "en": "Cheese, ham, tomato, rocket, mayonnaise",
+                        "el": "Τυρί, ζαμπόν, ντομάτα, ρόκα, μαγιονέζα"
+                    },
+                    "price": 8.00
+                },
+                {
+                    "name": {"en": "2. Club sandwich", "el": "2. Κλαμπ σάντουιτς"},
+                    "description": {
+                        "en": "Cheese, turkey, bacon, tomato, rocket, mayonnaise",
+                        "el": "Τυρί, γαλοπούλα, μπέικον, ντομάτα, ρόκα, μαγιονέζα"
+                    },
+                    "price": 8.00
+                },
+                {
+                    "name": {"en": "3. Club sandwich", "el": "3. Κλαμπ σάντουιτς"},
+                    "description":{
+                        "en": "Cheese, chicken, tomato, rocket, mayonnaise",
+                        "el": "Τυρί, κοτόπουλο, ντομάτα, ρόκα, μαγιονέζα"
+                    },
+                    "price": 9.00
+                },
+                {
+                    "name": {"en": "4. Club sandwich", "el": "4. Κλαμπ σάντουιτς"},
+                    "description":{
+                        "en": "Cheese, beef burger, tomato, rocket, coctail sauce",
+                        "el": "Τυρί, μπιφτέκι, ντομάτα, ρόκα, σως κοκτέιλ"
+                    },
+                    "price": 9.00
+                },
+                {
+                    "name": {"en": "5. Club sandwich", "el": "5. Κλαμπ σάντουιτς"},
+                    "description":{
+                        "en": "Cheese, pork gyro, tomato, salad, tzatziki/mayonnaise",
+                        "el": "Τυρί, γύρο χοιρινό, ντομάτα, σαλάτα, τζατζίκι/μαγιονέζα"
+                    },
+                    "price": 8.00
+                },
+                {
+                    "name": {"en": "Burger", "el": "Μπέργκερ"},
+                    "description":{
+                        "en": "Cheese, burger, bacon, tomato, rocket, coctail sauce",
+                        "el": "Τυρί, μπιφτέκι, μπέικον, ντομάτα, ρόκα, σως κοκτέιλ"
+                    },
+                    "price": 8.00
+                },
+                {
+                    "name":{"en": "1. Tost", "el": "1. Τοστ"},
+                    "description":{
+                        "en": "Cheese, ham",
+                        "el": "Τυρί, ζαμπόν"
+                    },
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "2. Tost", "el": "2. Τοστ"},
+                    "description":{
+                        "en": "Cheese, turkey",
+                        "el": "Τυρί, γαλοπούλα"
+                    },
+                    "price": 3.00
+                },
+                {
+                    "name": {"en": "Meatballs", "el": "Κεφτεδάκια"},
+                    "price": 8.00
+                },
+                {
+                    "name": {"en": "Chicken nuggets", "el": "Κοτομπουκιές"},
+                    "price": 8.00
+                }
+            ]
+        }
+    ]
+}
+  
