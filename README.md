@@ -6,7 +6,7 @@
 
 ## 📋 Table of Contents
 
-1. [Overview](#-overview)  
+1. [Overview](#overview)  
 2. [Features](#-features)  
 3. [Screenshots](#-screenshots)  
 4. [Technologies](#-technologies)  
