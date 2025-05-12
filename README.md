@@ -7,15 +7,15 @@
 ## 📋 Table of Contents
 
 1. [Overview](#overview)  
-2. [Features](#-features)  
-3. [Screenshots](#-screenshots)  
-4. [Technologies](#-technologies)  
-5. [Installation & Usage](#-installation--usage)  
-6. [Deployment](#-deployment)  
-7. [License](#-license)  
-8. [Contact](#-contact)  
-9. [Acknowledgements](#-acknowledgements)  
-10. [Changelog](#-changelog)  
+2. [Features](#features)  
+3. [Screenshots](#screenshots)  
+4. [Technologies](#technologies)  
+5. [Installation & Usage](#installation--usage)  
+6. [Deployment](#deployment)  
+7. [License](#license)  
+8. [Contact](#contact)  
+9. [Acknowledgements](#acknowledgements)  
+10. [Changelog](#changelog)  
 
 ## Overview
 
