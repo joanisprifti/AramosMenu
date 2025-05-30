@@ -86,7 +86,7 @@ This project is licensed under the **Apache License 2.0**. See [LICENSE](https:/
 
 ## Contact
 John Priftis
-- GitHub: [johnprif](https://github.com/johnprif)
+- GitHub: [joanisprifti](https://github.com/joanisprifti)
 - Email: [joanisprifti@gmail.com](mailto:joanisprifti@gmail.com)
 - Phone: [+306940020178](tel:+306940020178)
 
