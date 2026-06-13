@@ -1,105 +1,151 @@
-# AramosMenu
+# Aramos — digital menu
 
-> A mobile‑friendly web menu for **Aramos Beach Bar**, enabling customers to scan a QR code and instantly view the menu in Greek or English. Hosted via AWS Amplify for fast, reliable delivery. 
+A fast, mobile-first, bilingual (EL/EN) menu you can scan at the table.
+It has live search, a sticky category nav, and an optional **order basket**
+(tap + to build a selection and see a running total).
+It's fully **data-driven**: one config file controls the brand and look, one
+file holds the menu. No build step, no framework — just open `index.html` or
+drop the folder on any static host.
 
-[Live Demo » (Click here)](https://main.demk8o6naor0f.amplifyapp.com/)
+```
+index.html     markup shell (rarely needs editing)
+style.css      layout + design tokens
+script.js      the engine (render, search, navigation)
+config.json    ← branding, colours, languages, links   (edit this)
+menu.json      ← the menu content                       (edit this)
+aramosLogo.png ← the logo
+```
 
-## 📋 Table of Contents
+---
 
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Screenshots](#screenshots)  
-4. [Technologies](#technologies)  
-5. [Installation & Usage](#installation--usage)  
-6. [Deployment](#deployment)  
-7. [License](#license)  
-8. [Contact](#contact)  
-9. [Acknowledgements](#acknowledgements)  
-10. [Changelog](#changelog)  
+## Rebrand for a new venue in ~5 minutes
 
-## Overview
+Everything below lives in **`config.json`** — no code changes needed.
 
-- **Purpose:** Replace printed menus with a responsive, multi‑language web menu accessible via QR code.  
-- **Stack:** HTML5, CSS3, JavaScript (ES6), AWS Amplify.
+1. **Logo** — drop the new file in the folder and point `brand.logo` at it.
+   The header sits on a dark band, so a logo with a transparent or dark
+   background looks best. If the logo has no wordmark of its own, set
+   `"showWordmark": true` to print the name + tagline beneath it.
+2. **Name & tagline** — `brand.name`, `brand.tagline`.
+3. **Colours** — edit the `theme` block. These values are written onto the
+   page as CSS variables at load, so changing the six core colours
+   (`brand`, `surf`, `sand`, `shell`, `ink`, `coral`) re-skins the whole site.
+4. **Currency** — `brand.currency` (`"€"`, `"$"`, …) and `currencyPosition`
+   (`"after"` → `2.50€`, `"before"` → `$2.50`).
+5. **Links** — the `social` array. Each entry is `{ "net": …, "url": … }`.
+   Supported `net` icons: `instagram`, `facebook`, `map`, `tripadvisor`,
+   `whatsapp`, `tiktok`, `x`, `phone` (anything else gets a generic link icon).
+6. **Menu** — replace `menu.json` (schema below).
 
-## Features
+> Changing the **font** also means swapping the Google Fonts `<link>` in
+> `index.html` to load the new family. Keep a face that includes Greek glyphs
+> (the defaults, Alegreya / Alegreya Sans, do).
 
-- **QR‑driven access**: Customers scan a QR code and view the menu instantly on any smartphone.
-- **Dual‑language support**: Toggle between Greek and English with one click. 
-- **Responsive design**: Adapts seamlessly to all mobile screen sizes.
-- **Lightweight and fast**: Pure HTML/CSS/JavaScript—no heavy frameworks.
-- **Easy maintenance**: Content driven by a simple JSON menu file for quick updates. 
+---
 
-## Screenshots
+## `menu.json` schema
 
-<p align="center">  
-  <img src="https://github.com/johnprif/AramosMenu/assets/56134761/7bd8f198-1717-434b-a32a-3f7ff80747be" alt="Menu English view" width="300"/>  
-  <img src="https://github.com/johnprif/AramosMenu/assets/56134761/297dc7a3-bf1d-42c1-b125-2b288101b266" alt="Menu Greek view" width="300"/>  
-</p>  
-<p align="center">  
-  <img src="https://github.com/johnprif/AramosMenu/assets/56134761/c251b094-99d3-4d10-9257-4ee856641436" alt="QR Code" width="150"/>  
-</p>
+```jsonc
+{
+  "menu": [
+    {
+      "id": "coffee",                      // unique, url-safe (used for nav)
+      "name": { "en": "COFFEE", "el": "ΚΑΦΕΔΕΣ" },
+      "items": [
+        {
+          "name": { "en": "Latte", "el": "Λάτε" },
+          "description": { "en": "hot, cold", "el": "ζεστό, κρύο" }, // optional
+          "price": 3.50,
+          "featured": true,                // optional → shows a ★
+          "tags": [                        // optional → small pills
+            { "en": "Vegan", "el": "Νηστίσιμο" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
 
-## Technologies
+- **Add a category** → add an object to `menu`. It appears in the menu *and*
+  the sticky category nav automatically.
+- **No price yet?** Use `0` (or omit `price`). It renders as the
+  `brand.marketPriceLabel` dash (`—`) instead of `0.00€`.
+- **Dietary / allergen tags** are *not* auto-detected — add them per item via
+  `tags` so they're accurate. Only staff who know the recipes should set these.
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6)
-- **Hosting:** AWS Amplify (static web hosting)
-- **Build tools:** None (vanilla JS); deployed via Amplify CLI
+---
 
-<!-- ## 🚀 Getting Started
+## `config.json` quick reference
 
-### Prerequisites
+| Key | What it does |
+|---|---|
+| `brand` | name, tagline, logo, currency, market-price label |
+| `languages` | list of `{ code, label }`; the toggle cycles through them |
+| `defaultLanguage` / `autoDetectLanguage` | starting language (auto uses the visitor's browser language when it matches) |
+| `features` | turn `search`, `categoryNav`, `backToTop`, `basket` on/off |
+| `notice` / `searchPlaceholder` / `emptyState` | UI strings, per language |
+| `basket` | order-basket labels, per language (see *Order basket* below) |
+| `social` | footer links |
+| `theme` | colours, radius, fonts (applied as CSS variables) |
 
-Ensure you have the following installed:  
-- A modern web browser (Chrome, Safari, Firefox) :contentReference[oaicite:9]{index=9}  
-- (Optional) AWS CLI & Amplify CLI configured for deployments :contentReference[oaicite:10]{index=10}   -->
+Adding a third language is just another entry in `languages` plus the matching
+`el`/`en`/… keys throughout `menu.json` and the string blocks in `config.json`.
 
-## Installation & Usage
+---
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/johnprif/AramosMenu.git
-   cd AramosMenu
+## Order basket
 
-2. **Open** the menu in your browser  
-   - Click [index.html](https://github.com/johnprif/AramosMenu/blob/main/index.html) to preview the page
+Each item gets a **+** button. Tapping it adds the item and turns the button
+into a **− / quantity / +** stepper (at quantity 1 the minus becomes a remove).
+A floating bar shows the item count and running total; tapping it opens a
+slide-up sheet listing the selection, line totals, the grand total, and a
+**Clear** button.
 
-3. **Edit** the source files as needed:  
-   1. [index.html](https://github.com/johnprif/AramosMenu/blob/main/index.html) — update menu structure, items & prices
-   2. [style.css](https://github.com/johnprif/AramosMenu/blob/main/style.css) — customize layout, colors & typography
-   3. [script.js](https://github.com/johnprif/AramosMenu/blob/main/script.js) — adjust language‑toggle logic and pricing calculations
+> **It is not a checkout.** There's no payment or order-sending backend — the
+> basket is a selection the guest builds and *shows to staff*. That framing is
+> the `basket.note` string, so you can reword it (or point it at a phone number,
+> table-service instruction, etc.).
 
-## Deployment
-This site uses AWS Amplify's **continuous deployment** from this repository: whenever you push to the main branch, Amplify automatically builds and publishes the latest version. No local‑CLI install or manual “amplify publish” is required—updates appear live within seconds of your Git commit.
+**Turn it off** — set `features.basket` to `false`. The menu becomes
+view-only: no buttons, no bar, no sheet.
 
-To set up or review Github connection in the Amplify Console:
+**Customise the wording** — edit the `basket` block in `config.json`. Every key
+is per-language:
 
-1. **Open the Amplify Console** in the AWS Management Console and select your AramosMenu app (or choose **Host web app** ▶︎ **GitHub**).  
-2. **Authorize** the AWS Amplify GitHub App (if not already)—grant it access to the specific repo and branch (e.g. `main`).  
-3. **Verify build settings** under **App settings ▶︎ Build settings**; Amplify uses a default build specification (`amplify.yml`) suitable for static HTML/CSS/JS apps.  
-4. **Push changes** to GitHub. Amplify’s CI/CD pipeline will detect the commit, execute the build, and deploy to the Amplify‑provided CDN domain automatically.
+| Key | Where it shows |
+|---|---|
+| `title` | sheet header (a `· {n} items` count is appended automatically) |
+| `open` | label on the floating bar |
+| `empty` | message when the basket is empty |
+| `total` / `clear` | totals row label and the clear button |
+| `note` | the small print under the total (the "show staff" line) |
+| `marketNote` | shown when the basket mixes priced and market-price items |
+| `itemsOne` / `itemsMany` | the count text; `{n}` is replaced by the number |
+| `add` / `remove` | accessibility labels for the buttons |
 
-If you ever need to adjust the build or add custom redirects, you can edit the **amplify.yml** directly in the Amplify Console or in your repo root. For custom domains or HTTPS settings, configure under **App settings ▶︎ Domain management** in the Amplify Console.  
+**Prices & currency** — totals use `brand.currency` and `currencyPosition`,
+exactly like the item prices. Market-price items (`price: 0` or omitted) can
+still be added; they show the `—` dash, are left out of the numeric total, and
+trigger the `marketNote` line so nothing looks mis-summed.
 
-## License
-This project is licensed under the **Apache License 2.0**. See [LICENSE](https://github.com/johnprif/AramosMenu/blob/main/LICENSE).
+**Persistence** — the basket is saved in the visitor's browser per venue
+(`localStorage`), so it survives a page refresh and is namespaced by
+`brand.name` (two venues won't collide). If storage is blocked — e.g. a preview
+sandbox or private mode — it silently falls back to keeping the basket in memory
+for that session.
 
-## Contact
-John Priftis
-- GitHub: [joanisprifti](https://github.com/joanisprifti)
-- Email: [joanisprifti@gmail.com](mailto:joanisprifti@gmail.com)
-- Phone: [+306940020178](tel:+306940020178)
+---
 
-## Acknowledgements
-- **[othneildrew/Best-README-Template](https://www.hatica.io/blog/best-practices-for-github-readme/?utm_source=chatgpt.com)** for structure inspiration.
-- **[FreeCodeCamp](https://github.com/Louis3797/awesome-readme-template?utm_source=chatgpt.com)** article on witing good READMEs
-- **[GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax?utm_source=chatgpt.com)** on basic Markdown syntax and TOC support.
-- **[Hatica blog](https://www.hatica.io/blog/best-practices-for-github-readme/?utm_source=chatgpt.com)** on eye-catching README design.
+## Content notes worth a look
 
-## Changelog
-- **v1.0** (2023-06-25): Initial release with QR-menu, dual-language support, AWS hosting.
-- **v1.1** (2023-06-28): Update logo
-- **v1.2** (2025-05/08): Small visual updates
+While wiring this up, a few items had **mismatched EN/EL descriptions** or
+prices that need a human decision — I left the data as-is rather than guess:
 
-
-
+- **ARAMOS** cocktail: EN says *cinnamon*, EL says *κυδώνι* (quince).
+- **MELLOTINI**: EN says *melon liqueur*, EL says *λικέρ μέλι* (honey); EN also
+  reads "liqueur mellon" (→ melon).
+- A few English typos in descriptions: "almont" → almond, "bitetr orange" →
+  bitter orange, "coctail" → cocktail, "Stratsiatela" → Stracciatella.
+- `price: 0` on Chocolate soufflé, Kataifi, Banoffi, Fruit salad — currently
+  shown as `—`. Set real prices when ready.

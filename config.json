@@ -1,0 +1,78 @@
+{
+  "brand": {
+    "name": "Aramos",
+    "tagline": "beach bar",
+    "logo": "aramosLogo.png",
+    "showWordmark": false,
+    "currency": "€",
+    "currencyPosition": "after",
+    "marketPriceLabel": "—"
+  },
+
+  "languages": [
+    { "code": "en", "label": "EN" },
+    { "code": "el", "label": "ΕΛ" }
+  ],
+  "defaultLanguage": "en",
+  "autoDetectLanguage": true,
+
+  "features": {
+    "search": true,
+    "categoryNav": true,
+    "backToTop": true,
+    "basket": true
+  },
+
+  "notice": {
+    "en": "Please tell our staff about any allergies or dietary needs before ordering.",
+    "el": "Παρακαλούμε ενημερώστε το προσωπικό μας για τυχόν αλλεργίες ή διατροφικούς περιορισμούς πριν παραγγείλετε."
+  },
+
+  "searchPlaceholder": {
+    "en": "Search the menu…",
+    "el": "Αναζήτηση στο μενού…"
+  },
+  "emptyState": {
+    "en": { "title": "Nothing here", "text": "No items match your search." },
+    "el": { "title": "Κανένα αποτέλεσμα", "text": "Δεν βρέθηκαν προϊόντα." }
+  },
+
+  "basket": {
+    "title":      { "en": "Your order",   "el": "Η παραγγελία σου" },
+    "open":       { "en": "View order",   "el": "Δες την παραγγελία" },
+    "empty":      { "en": "Your order is empty. Tap + on any item to add it.",
+      "el": "Η παραγγελία σου είναι άδεια. Πάτησε + σε ένα προϊόν για να το προσθέσεις." },
+    "total":      { "en": "Total",        "el": "Σύνολο" },
+    "clear":      { "en": "Clear",        "el": "Καθαρισμός" },
+    "note":       { "en": "This is your selection to show our staff — not a paid order.",
+      "el": "Αυτή είναι η επιλογή σου για να τη δείξεις στο προσωπικό — δεν είναι πληρωμένη παραγγελία." },
+    "marketNote": { "en": "plus market-price items", "el": "συν προϊόντα σε τιμή ημέρας" },
+    "itemsOne":   { "en": "{n} item",     "el": "{n} προϊόν" },
+    "itemsMany":  { "en": "{n} items",    "el": "{n} προϊόντα" },
+    "add":        { "en": "Add",          "el": "Προσθήκη" },
+    "remove":     { "en": "Remove",       "el": "Αφαίρεση" }
+  },
+
+  "social": [
+    { "net": "instagram", "url": "https://www.instagram.com/aramos_beachbar/" },
+    { "net": "facebook",  "url": "https://www.facebook.com/people/Aramos-cafe-bar/100063668855474/?_rdr" },
+    { "net": "map",       "url": "https://maps.app.goo.gl/6LYb2EaeXkJrLxa66" }
+  ],
+
+  "theme": {
+    "ink":          "#0E2A33",
+    "brand":        "#0C6E84",
+    "brand-bright": "#1597B5",
+    "surf":         "#41C7C2",
+    "sand":         "#FBF6EC",
+    "shell":        "#FFFFFF",
+    "muted":        "#5F7A82",
+    "coral":        "#EE6C4D",
+    "line":         "#EAE1D2",
+    "hero-1":       "#0A2630",
+    "hero-2":       "#0D3340",
+    "radius":       "18px",
+    "font-display": "'Alegreya', Georgia, serif",
+    "font-body":    "'Alegreya Sans', system-ui, -apple-system, sans-serif"
+  }
+}
