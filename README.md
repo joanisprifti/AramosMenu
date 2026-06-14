@@ -8,12 +8,16 @@ file holds the menu. No build step, no framework — just open `index.html` or
 drop the folder on any static host.
 
 ```
-index.html -> markup shell
-style.css -> layout + design tokens
-script.js -> the engine (render, search, navigation)
-config.json -> branding, colours, languages, links
-menu.json -> the menu content
-aramosLogo.png -> the logo
+index.html     markup shell (rarely needs editing)
+style.css      layout + design tokens
+script.js      the engine (render, search, navigation, basket)
+config.json    ← branding, colours, languages, links   (edit this)
+menu.json      ← the menu content                       (edit this)
+aramosLogo.png ← the logo
+
+admin.html     in-browser menu editor — owner only (see "Editing" below)
+admin.css      editor styling
+admin.js       editor engine
 ```
 
 ---
@@ -134,6 +138,68 @@ trigger the `marketNote` line so nothing looks mis-summed.
 `brand.name` (two venues won't collide). If storage is blocked — e.g. a preview
 sandbox or private mode — it silently falls back to keeping the basket in memory
 for that session.
+
+---
+
+## Editing the menu without touching JSON
+
+Open **`admin.html`** in a browser. It's a full editor for the menu — add /
+edit / delete / reorder categories and items, set names and descriptions in
+every configured language, prices, the ★ featured flag, and tag pills. It reads
+your `config.json`, so it speaks the same languages and currency as the live
+site and works unchanged for any venue.
+
+**How publishing works — and why it's safe.** The editor saves your changes as
+a **draft in your browser** and never touches the live site. To publish:
+
+1. Edit. Use **Preview** to see the draft rendered as the real menu.
+2. Click **Download menu.json**.
+3. Upload that file to your host, replacing the old `menu.json`.
+
+Because the only way the live menu changes is *you uploading the file*, someone
+who opens `admin.html` can build a draft on their own device but **cannot change
+what your customers see**. That publish step is the real security boundary.
+
+Toolbar: **Published** reloads the live file · **Import** opens a `menu.json`
+from disk · **Preview** opens the live menu rendered from your draft (via a
+private `#preview` mode that customers never trigger) · **Discard draft** clears
+local changes · **Download menu.json** publishes.
+
+### Keep the editor page private
+
+The publish boundary already stops anyone from changing the menu. To also stop
+people from *opening* the editor, protect the page at your host — this is real
+authentication, unlike any in-page password (a static page's code is always
+readable, so a JS password is not security):
+
+- **Apache / cPanel** — drop a `.htaccess` next to `admin.html`:
+  ```apache
+  <Files "admin.html">
+    AuthType Basic
+    AuthName "Menu editor"
+    AuthUserFile /full/path/to/.htpasswd
+    Require valid-user
+  </Files>
+  ```
+  Create the password file with `htpasswd -c /full/path/to/.htpasswd yourname`.
+- **Netlify** — a password-protected route, or Netlify Identity.
+- **Cloudflare Pages** — put the page behind **Cloudflare Access** (email login).
+
+There's also an optional **on-device PIN** (the lock icon in the toolbar). It's
+a convenience lock for your own phone or laptop only — **not** internet
+security. Use host protection above for real privacy.
+
+### If you want edits to go live instantly (no file upload)
+
+That needs a backend — a static site can't write to itself. Good low/no-code
+routes, in rough order of effort:
+
+- **Git-based CMS** (Decap CMS or Sveltia CMS) on Netlify / Cloudflare Pages:
+  you log in (real auth), edit in a UI, and it commits `menu.json` and redeploys
+  for you. Closest to "edit on phone → instantly live".
+- **Google Sheet as the source**: keep the menu in a Sheet the site reads;
+  editing is gated by Google sign-in. Very friendly for non-technical staff.
+- **A small serverless function + database** for a fully custom admin with login.
 
 ---
 

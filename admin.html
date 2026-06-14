@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0A2630">
+  <title>Menu editor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+
+  <!-- OPTIONAL ON-DEVICE PIN (soft lock — see the note inside) -->
+  <div class="lock" id="lock">
+    <div class="lock__card">
+      <div class="lock__spiral" data-spiral aria-hidden="true"></div>
+      <h1 class="lock__title">Menu editor</h1>
+      <p class="lock__sub" id="lock-sub">Enter the editor PIN for this device.</p>
+      <input class="lock__pin" id="lock-pin" type="password" inputmode="numeric"
+             autocomplete="off" maxlength="12" aria-label="Editor PIN">
+      <p class="lock__err" id="lock-err"></p>
+      <button class="btn btn--primary lock__btn" id="lock-go" type="button">Unlock</button>
+      <p class="lock__note">This PIN is only a soft lock on this device — it is <b>not</b> internet security. Real privacy comes from protecting this page at your host (see the README).</p>
+    </div>
+  </div>
+
+  <!-- TOP BAR -->
+  <header class="adm-top">
+    <div class="adm-top__row">
+      <span class="adm-brand">
+        <span class="adm-brand__spiral" data-spiral aria-hidden="true"></span>
+        <span class="adm-brand__txt">
+          <span class="adm-brand__name" id="adm-name">Menu editor</span>
+          <span class="adm-brand__sub">menu editor</span>
+        </span>
+      </span>
+
+      <div class="adm-actions">
+        <span class="adm-status" id="adm-status"></span>
+        <button class="btn btn--ghost" id="btn-load" type="button" title="Reload the published menu.json from the server">
+          <i class="fa-solid fa-rotate"></i> Published
+        </button>
+        <button class="btn btn--ghost" id="btn-import" type="button" title="Open a menu.json file from your computer">
+          <i class="fa-solid fa-file-arrow-up"></i> Import
+        </button>
+        <button class="btn btn--ghost" id="btn-preview" type="button" title="Preview the live menu using this draft">
+          <i class="fa-solid fa-eye"></i> Preview
+        </button>
+        <button class="btn btn--ghost" id="btn-discard" type="button" title="Delete the local draft and reload the published menu">
+          <i class="fa-solid fa-trash-can"></i> Discard draft
+        </button>
+        <button class="btn btn--primary" id="btn-download" type="button" title="Download menu.json to publish">
+          <i class="fa-solid fa-download"></i> Download menu.json
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HONESTY BANNER -->
+  <div class="adm-note">
+    <div class="adm-note__inner">
+      <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      <span>Changes here are a <b>draft saved on this device</b>. Your live menu updates only when you
+      <b>Download&nbsp;menu.json</b> and upload it to your host. Use <b>Preview</b> to see the draft first.</span>
+    </div>
+  </div>
+
+  <!-- VALIDATION ISSUES -->
+  <div class="adm-issues" id="adm-issues">
+    <div class="adm-issues__inner">
+      <b>Before publishing, fix these:</b>
+      <ul id="adm-issues-list"></ul>
+    </div>
+  </div>
+
+  <!-- EDITOR -->
+  <main class="editor" id="editor"></main>
+
+  <div class="adm-foot">
+    <button class="add-cat" id="btn-add-cat" type="button">
+      <i class="fa-solid fa-plus"></i>&nbsp; Add category
+    </button>
+  </div>
+
+  <input type="file" id="file-input" accept="application/json,.json" hidden>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0A2630">
-    <title>Menu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A2630">
+  <title>Menu</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;600;700&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO (scrolls away) -->
-<header class="hero">
+  <!-- HERO (scrolls away) -->
+  <header class="hero">
     <div class="hero__spiral" data-spiral aria-hidden="true"></div>
     <img class="hero__logo" id="hero-logo" src="" alt="" hidden>
     <h1 class="hero__wordmark" id="hero-wordmark" hidden></h1>
     <p class="hero__tagline" id="hero-tagline" hidden></p>
-</header>
+  </header>
 
-<!-- STICKY BAR: brand · search · language · category nav -->
-<div class="bar">
+  <!-- STICKY BAR: brand · search · language · category nav -->
+  <div class="bar">
     <div class="bar__row">
       <span class="brandmini" id="brandmini">
         <span class="brandmini__spiral" data-spiral aria-hidden="true"></span>
         <span id="brandmini-name"></span>
       </span>
 
-        <label class="search" id="search">
-            <i class="fa-solid fa-magnifying-glass search__icon" aria-hidden="true"></i>
-            <input type="search" class="search__input" id="search-input"
-                   autocomplete="off" enterkeyhint="search" aria-label="Search the menu">
-            <button class="search__clear" id="search-clear" type="button" aria-label="Clear search">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-        </label>
+      <label class="search" id="search">
+        <i class="fa-solid fa-magnifying-glass search__icon" aria-hidden="true"></i>
+        <input type="search" class="search__input" id="search-input"
+               autocomplete="off" enterkeyhint="search" aria-label="Search the menu">
+        <button class="search__clear" id="search-clear" type="button" aria-label="Clear search">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </label>
 
-        <button class="lang" id="lang-toggle" type="button"></button>
+      <button class="lang" id="lang-toggle" type="button"></button>
     </div>
 
     <nav class="catnav" id="catnav" aria-label="Menu categories"></nav>
-</div>
+  </div>
 
-<!-- MENU -->
-<main class="menu" id="menu"></main>
+  <!-- MENU -->
+  <main class="menu" id="menu"></main>
 
-<!-- SEARCH EMPTY STATE -->
-<div class="empty" id="empty">
+  <!-- SEARCH EMPTY STATE -->
+  <div class="empty" id="empty">
     <div class="empty__spiral" data-spiral aria-hidden="true"></div>
     <p class="empty__title" id="empty-title"></p>
     <p id="empty-text"></p>
-</div>
+  </div>
 
-<!-- ALLERGEN NOTICE -->
-<section class="notice">
+  <!-- ALLERGEN NOTICE -->
+  <section class="notice">
     <div class="notice__inner">
-        <i class="fa-solid fa-circle-info notice__icon" aria-hidden="true"></i>
-        <p class="notice__text" id="notice-text"></p>
+      <i class="fa-solid fa-circle-info notice__icon" aria-hidden="true"></i>
+      <p class="notice__text" id="notice-text"></p>
     </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="footer">
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="footer__social" id="social"></div>
     <p class="footer__copy" id="copyright"></p>
-</footer>
+  </footer>
 
-<!-- BACK TO TOP -->
-<button class="totop" id="totop" type="button" aria-label="Back to top">
+  <!-- BACK TO TOP -->
+  <button class="totop" id="totop" type="button" aria-label="Back to top">
     <span data-spiral aria-hidden="true"></span>
-</button>
+  </button>
 
-<!-- BASKET BAR (appears once items are added) -->
-<button class="basket-bar" id="basket-bar" type="button" hidden aria-haspopup="dialog">
+  <!-- BASKET BAR (appears once items are added) -->
+  <button class="basket-bar" id="basket-bar" type="button" hidden aria-haspopup="dialog">
     <span class="basket-bar__left">
       <span class="basket-bar__badge" id="basket-count">0</span>
       <span class="basket-bar__label" id="basket-open-label"></span>
     </span>
     <span class="basket-bar__total" id="basket-bar-total"></span>
-</button>
+  </button>
 
-<!-- ORDER SHEET -->
-<div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
-<aside class="sheet" id="basket" role="dialog" aria-modal="true" aria-labelledby="basket-title" hidden>
+  <!-- ORDER SHEET -->
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <aside class="sheet" id="basket" role="dialog" aria-modal="true" aria-labelledby="basket-title" hidden>
     <div class="sheet__head">
-        <span class="sheet__spiral" data-spiral aria-hidden="true"></span>
-        <h2 class="sheet__title" id="basket-title"></h2>
-        <button class="sheet__close" id="basket-close" type="button" aria-label="Close">
-            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
+      <span class="sheet__spiral" data-spiral aria-hidden="true"></span>
+      <h2 class="sheet__title" id="basket-title"></h2>
+      <button class="sheet__close" id="basket-close" type="button" aria-label="Close">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
     </div>
     <div class="sheet__body">
-        <p class="sheet__empty" id="basket-empty"></p>
-        <ul class="sheet__list" id="basket-list"></ul>
+      <p class="sheet__empty" id="basket-empty"></p>
+      <ul class="sheet__list" id="basket-list"></ul>
     </div>
     <div class="sheet__foot" id="basket-foot" hidden>
-        <div class="sheet__totals">
-            <span class="sheet__total-label" id="basket-total-label"></span>
-            <span class="sheet__total-value" id="basket-total-value"></span>
-        </div>
-        <p class="sheet__market" id="basket-market" hidden></p>
-        <div class="sheet__actions">
-            <button class="sheet__clear" id="basket-clear" type="button"></button>
-        </div>
-        <p class="sheet__note" id="basket-note"></p>
+      <div class="sheet__totals">
+        <span class="sheet__total-label" id="basket-total-label"></span>
+        <span class="sheet__total-value" id="basket-total-value"></span>
+      </div>
+      <p class="sheet__market" id="basket-market" hidden></p>
+      <div class="sheet__actions">
+        <button class="sheet__clear" id="basket-clear" type="button"></button>
+      </div>
+      <p class="sheet__note" id="basket-note"></p>
     </div>
-</aside>
+  </aside>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
