@@ -8,12 +8,12 @@ file holds the menu. No build step, no framework — just open `index.html` or
 drop the folder on any static host.
 
 ```
-index.html     markup shell (rarely needs editing)
-style.css      layout + design tokens
-script.js      the engine (render, search, navigation)
-config.json    ← branding, colours, languages, links   (edit this)
-menu.json      ← the menu content                       (edit this)
-aramosLogo.png ← the logo
+index.html -> markup shell
+style.css -> layout + design tokens
+script.js -> the engine (render, search, navigation)
+config.json -> branding, colours, languages, links
+menu.json -> the menu content
+aramosLogo.png -> the logo
 ```
 
 ---
