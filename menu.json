@@ -33,14 +33,14 @@
             "en": "Freddo cappuccino",
             "el": "Φρέντο καπουτσίνο"
           },
-          "price": 3.5
+          "price": 4
         },
         {
           "name": {
             "en": "Espresso maciato",
             "el": "Εσπρέσσο μακιάτο"
           },
-          "price": 2.5
+          "price": 3
         },
         {
           "name": {
@@ -146,7 +146,7 @@
             "en": "Chocolate Viennoua",
             "el": "Σοκολάτα Βιενουά"
           },
-          "price": 4
+          "price": 0
         }
       ]
     },
@@ -205,6 +205,13 @@
             "el": "Φυσικός χυμός πορτοκάλι"
           },
           "price": 4
+        },
+        {
+          "name": {
+            "en": "Fresh mixed juice",
+            "el": "Φυσικός χυμός ανάμικτος"
+          },
+          "price": 0
         }
       ]
     },
@@ -388,14 +395,28 @@
         },
         {
           "name": {
-            "en": "Vivlia Hora",
-            "el": "Βιβλία Χώρα"
+            "en": "Tris Magises",
+            "el": "Τρεις Μάγισσες"
           },
           "description": {
-            "en": "white, red",
-            "el": "Λευκό, κόκκινο"
+            "en": "rose, semisweet",
+            "el": "ροζέ, ημίγλυκο"
+          },
+          "price": 5
+        },
+        {
+          "name": {
+            "en": "Moschato D'asti",
+            "el": "Moschato D'asti"
           },
           "price": 7
+        },
+        {
+          "name": {
+            "en": "Prosecco",
+            "el": "Prosecco"
+          },
+          "price": 0
         }
       ]
     },
@@ -415,14 +436,14 @@
             "en": "passion fruit, pineapple, almond, coconut, melon, tangerine, strawberry, green apple",
             "el": "φρούτα του πάθους, ανανάς, αμύγδαλο, καρύδα, πεπόνι, μανταρίνι, φράουλα, πράσινο μήλο"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
             "en": "MARGARITA",
             "el": "MARGARITA"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -433,18 +454,18 @@
             "en": "rum, pineapple, coconut, lime",
             "el": "ρούμι, ανανάς, καρύδα, λάιμ"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
-            "en": "PORNSTAR",
-            "el": "PORNSTAR"
+            "en": "PORNSTAR 8.00",
+            "el": "PORNSTAR 8.00"
           },
           "description": {
             "en": "vodka, vanilla, passion fruit, passoa, lime",
             "el": "βότκα, βανίλια, φρούτα του πάθους, πασόα, λάιμ"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -455,7 +476,7 @@
             "en": "rum, pineapple, lime, almond",
             "el": "ρούμι, ανανάς, λάιμ, αμύγδαλο"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -466,7 +487,7 @@
             "en": "strawberry, passion fruit, pineapple, coconut, melon, tangerine, green apple",
             "el": "φράουλα, φρούτα του πάθους, ανανάς, καρύδα, πεπόνι, μανταρίνι, πράσινο μήλο"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -477,7 +498,7 @@
             "en": "vodka, sugar, lime",
             "el": "βότκα, ζάχαρη, λάιμ"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -488,14 +509,14 @@
             "en": "dissarono, lemon, bitter angostura",
             "el": "dissarono, λεμόνι, bitter angostura"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
             "en": "APEROL SPRITZ",
             "el": "APEROL SPRITZ"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -548,18 +569,6 @@
             "en": "cinammon, lime, pineapple, blue curacao, vodka, plum bitter",
             "el": "κυδώνι, λάιμ, ανανάς, blue curacao, βότκα, plum bitter"
           },
-          "price": 12,
-          "featured": true
-        },
-        {
-          "name": {
-            "en": "MELLOTINI",
-            "el": "MELLOTINI"
-          },
-          "description": {
-            "en": "liqueur mellon, mastiha, lime, ginger",
-            "el": "λικέρ μέλι, μαστίχα, λάιμ, τζίντζερ"
-          },
           "price": 12
         },
         {
@@ -602,7 +611,7 @@
             "en": "green tea, lime, mint, aegean 3 cents",
             "el": "πράσινο τσάι, λάιμ, μέντα, aegean 3 cents"
           },
-          "price": 7
+          "price": 9
         },
         {
           "name": {
@@ -613,14 +622,14 @@
             "en": "pineapple, passion fruit, almont, lime, bitetr orange",
             "el": "ανανάς, φρούτα του πάθους, αμύγδαλο, λάιμ, νεράντζι"
           },
-          "price": 7
+          "price": 9
         },
         {
           "name": {
             "en": "MOJITO O.",
             "el": "MOJITO O."
           },
-          "price": 7
+          "price": 9
         }
       ]
     },
@@ -693,6 +702,13 @@
         },
         {
           "name": {
+            "en": "Vikos Grapefruit",
+            "el": "Βίκος Grapefruit"
+          },
+          "price": 5
+        },
+        {
+          "name": {
             "en": "Three cents Aegean 200ml",
             "el": "Three cents Aegean 200ml"
           },
@@ -723,22 +739,210 @@
       "items": [
         {
           "name": {
-            "en": "Simple drink",
-            "el": "Ποτό απλό"
+            "en": "Jameson",
+            "el": "Jameson"
+          },
+          "description": {
+            "en": "Whiskey",
+            "el": "Ουίσκι"
           },
           "price": 7
         },
         {
           "name": {
-            "en": "Special drink",
-            "el": "Ποτό σπέσιαλ"
+            "en": "Haiq",
+            "el": "Haiq"
+          },
+          "description": {
+            "en": "Whiskey",
+            "el": "Ουίσκι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Chivas",
+            "el": "Chivas"
+          },
+          "description": {
+            "en": "Whiskey",
+            "el": "Ουίσκι"
+          },
+          "price": 9
+        },
+        {
+          "name": {
+            "en": "Beefeater",
+            "el": "Beefeater"
+          },
+          "description": {
+            "en": "Gin",
+            "el": "Τζιν"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Bombay",
+            "el": "Bombay"
+          },
+          "description": {
+            "en": "Gin",
+            "el": "Τζιν"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Handrick's",
+            "el": "Handrick's"
+          },
+          "description": {
+            "en": "Gin",
+            "el": "Τζιν"
+          },
+          "price": 10
+        },
+        {
+          "name": {
+            "en": "Stolichnaya",
+            "el": "Stolichnaya"
+          },
+          "description": {
+            "en": "Vodka",
+            "el": "Βότκα"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Absolut",
+            "el": "Absolut"
+          },
+          "description": {
+            "en": "Vodka",
+            "el": "Βότκα"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Grey Goose",
+            "el": "Grey Goose"
+          },
+          "description": {
+            "en": "Vodka",
+            "el": "Βότκα"
+          },
+          "price": 10
+        },
+        {
+          "name": {
+            "en": "Biaco",
+            "el": "Biaco"
+          },
+          "description": {
+            "en": "Martini",
+            "el": "Μαρτίνι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Rosso",
+            "el": "Rosso"
+          },
+          "description": {
+            "en": "Martini",
+            "el": "Μαρτίνι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Cointreau",
+            "el": "Cointreau"
+          },
+          "description": {
+            "en": "Martini",
+            "el": "Μαρτίνι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Dissarono",
+            "el": "Dissarono"
+          },
+          "description": {
+            "en": "Martini",
+            "el": "Μαρτίνι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Campari",
+            "el": "Campari"
+          },
+          "description": {
+            "en": "Martini",
+            "el": "Μαρτίνι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Bacardi",
+            "el": "Bacardi"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Havana Club",
+            "el": "Havana Club"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
+          },
+          "price": 7
+        },
+        {
+          "name": {
+            "en": "Havana Club 7",
+            "el": "Havana Club 7"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
           },
           "price": 8
         },
         {
           "name": {
+            "en": "Diplomatico",
+            "el": "Diplomatico"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
+          },
+          "price": 12
+        },
+        {
+          "name": {
             "en": "Ouzo Plomari 50ml",
             "el": "Ούζο Πλωμάρι 50ml"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
           },
           "price": 4
         },
@@ -746,6 +950,10 @@
           "name": {
             "en": "Tsipouro Idoniko 50ml",
             "el": "Τσίπουρο Ηδωνικό 50ml"
+          },
+          "description": {
+            "en": "Rum",
+            "el": "Ρούμι"
           },
           "price": 4
         }
@@ -869,16 +1077,16 @@
       ]
     },
     {
-      "id": "salades",
+      "id": "salads",
       "name": {
-        "en": "SALADES",
+        "en": "SALADS",
         "el": "ΣΑΛΑΤΕΣ"
       },
       "items": [
         {
           "name": {
-            "en": "Aramos salad",
-            "el": "Σαλάτα Άραμος"
+            "en": "1. Aramos salad",
+            "el": "1. Σαλάτα Άραμος"
           },
           "description": {
             "en": "mix vegetables, chicken, cherry tomatos, crouton, balsamic sauce",
@@ -889,15 +1097,15 @@
         },
         {
           "name": {
-            "en": "Greek salad",
-            "el": "Χωριάτικη"
+            "en": "2. Greek salad",
+            "el": "2. Χωριάτικη"
           },
           "price": 10
         },
         {
           "name": {
-            "en": "Fruit salad",
-            "el": "Φρουτοσαλάτα"
+            "en": "3. Fruit salad",
+            "el": "3. Φρουτοσαλάτα"
           },
           "price": 0
         }
@@ -938,6 +1146,17 @@
             "el": "3. Μπαγκέτα"
           },
           "description": {
+            "en": "Cheese, chicken, tomato, mayonnaise",
+            "el": "Τυρί, κοτόπουλο, ντομάτα, μαγιονέζα"
+          },
+          "price": 5
+        },
+        {
+          "name": {
+            "en": "4. Baguette",
+            "el": "4. Μπαγκέτα"
+          },
+          "description": {
             "en": "Filadelphia cheese, chicken nuggets, arugula",
             "el": "Φιλαδέλφεια, κοτομπουκιές, ρόκα"
           },
@@ -967,6 +1186,28 @@
         },
         {
           "name": {
+            "en": "3. Mexican Roll",
+            "el": "3. Τορτίγια"
+          },
+          "description": {
+            "en": "Gyros, tzatziki, tomato, onion, potato",
+            "el": "Γύρο, τζατζίκι, ντομάτα, κρεμμύδι, πατάτα"
+          },
+          "price": 6
+        },
+        {
+          "name": {
+            "en": "4. Mexican Roll",
+            "el": "4. Τορτίγια"
+          },
+          "description": {
+            "en": "Cheese, chicken, mixed salad, mayonnaise",
+            "el": "Τυρί, κοτόπουλο, ανάμεικτη σαλάτα, μαγιονέζα"
+          },
+          "price": 5
+        },
+        {
+          "name": {
             "en": "1. Club sandwich",
             "el": "1. Κλαμπ σάντουιτς"
           },
@@ -974,7 +1215,7 @@
             "en": "Cheese, ham, tomato, rocket, mayonnaise",
             "el": "Τυρί, ζαμπόν, ντομάτα, ρόκα, μαγιονέζα"
           },
-          "price": 8
+          "price": 9
         },
         {
           "name": {
@@ -985,7 +1226,7 @@
             "en": "Cheese, turkey, bacon, tomato, rocket, mayonnaise",
             "el": "Τυρί, γαλοπούλα, μπέικον, ντομάτα, ρόκα, μαγιονέζα"
           },
-          "price": 8
+          "price": 9
         },
         {
           "name": {
@@ -996,7 +1237,7 @@
             "en": "Cheese, chicken, tomato, rocket, mayonnaise",
             "el": "Τυρί, κοτόπουλο, ντομάτα, ρόκα, μαγιονέζα"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -1007,7 +1248,7 @@
             "en": "Cheese, beef burger, tomato, rocket, coctail sauce",
             "el": "Τυρί, μπιφτέκι, ντομάτα, ρόκα, σως κοκτέιλ"
           },
-          "price": 9
+          "price": 10
         },
         {
           "name": {
@@ -1018,18 +1259,29 @@
             "en": "Cheese, pork gyro, tomato, salad, tzatziki/mayonnaise",
             "el": "Τυρί, γύρο χοιρινό, ντομάτα, σαλάτα, τζατζίκι/μαγιονέζα"
           },
-          "price": 8
+          "price": 10
         },
         {
           "name": {
-            "en": "Burger",
-            "el": "Μπέργκερ"
+            "en": "1. Burger",
+            "el": "1. Μπέργκερ"
           },
           "description": {
             "en": "Cheese, burger, bacon, tomato, rocket, coctail sauce",
             "el": "Τυρί, μπιφτέκι, μπέικον, ντομάτα, ρόκα, σως κοκτέιλ"
           },
-          "price": 8
+          "price": 10
+        },
+        {
+          "name": {
+            "en": "2. Burger",
+            "el": "2. Μπέργερ"
+          },
+          "description": {
+            "en": "Cheese, chicken, nuggets, tomato, mayo, mixed salad",
+            "el": "Τυρί, κοτομπουκιές, ντομάτα, μαγιονέζα, mix σαλάτα"
+          },
+          "price": 10
         },
         {
           "name": {
@@ -1055,17 +1307,17 @@
         },
         {
           "name": {
-            "en": "Meatballs",
-            "el": "Κεφτεδάκια"
-          },
-          "price": 8
-        },
-        {
-          "name": {
             "en": "Chicken nuggets",
             "el": "Κοτομπουκιές"
           },
-          "price": 8
+          "price": 9
+        },
+        {
+          "name": {
+            "en": "Meatballs",
+            "el": "Κεφτεδάκια"
+          },
+          "price": 9
         }
       ]
     }
