@@ -59,7 +59,7 @@
     { "net": "map", "url": "https://maps.app.goo.gl/6LYb2EaeXkJrLxa66" }
   ],
 
-  "theme": {
+  "themes": {
     "ink": "#0E2A33",
     "brand": "#0C6E84",
     "brand-bright": "#1597B5",

@@ -72,7 +72,7 @@ boot();
 async function boot() {
   try {
     CFG = await fetch('./config.json').then(r => r.json());
-    applyTheme(CFG.theme);
+    applyTheme(CFG.themes);
     basketOn = CFG.features?.basket !== false;
     B = CFG.basket || BASKET_TEXT;
     STORAGE_KEY = 'menu.basket.' + slug(CFG.brand?.name || 'venue');
