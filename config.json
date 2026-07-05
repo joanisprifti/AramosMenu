@@ -20,7 +20,7 @@
     "search": true,
     "categoryNav": true,
     "backToTop": true,
-    "basket": true
+    "basket": false
   },
 
   "notice": {
